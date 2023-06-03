@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <BaseButton text="Search" icon="search" bgColor="#229451" color="white"/>
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
       check out the
@@ -33,11 +33,14 @@
 </template>
 
 <script>
+import BaseButton from './BaseButton.vue';
+
 export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
-  }
+    name: "HelloWorld",
+    props: {
+        msg: String
+    },
+    components: { BaseButton }
 }
 </script>
 

@@ -1,16 +1,33 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <BaseHeader/>
     </div>
     <router-view/>
   </div>
 </template>
 
+<script>
+import BaseHeader from './components/BaseHeader.vue'
+
+export default {
+  name: 'App',
+  components: {
+    BaseHeader
+  }
+}
+</script>
+
 <style>
+
+@font-face {
+    font-family: Cocon;
+    src: url("assets/CoconRegularFont.otf") format("opentype");
+}
+
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Cocon;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
