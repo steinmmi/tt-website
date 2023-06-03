@@ -5,7 +5,9 @@
         </div>
         <div class="right">
           <BaseButton icon="basket" bgColor="#F26173" color="white"/>
+          <router-link to="account-portal">
           <BaseButton icon="account" bgColor="#F26173" color="white"/>
+        </router-link>
         </div>
         
     </div>

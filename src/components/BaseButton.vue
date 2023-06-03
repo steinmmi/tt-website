@@ -1,8 +1,8 @@
 <template>
-    <div class="button" :style="{backgroundColor: bgColor, color }" :class="{
+    <div class="button" :style="{backgroundColor: bgColor, color, borderColor: color }" :class="{
         'icon-only': (!text || !text.length) && icon && icon.length
     }">
-        <div class="icon">
+        <div class="icon" v-if="icon && icon.length">
             <BaseIcon :icon="icon"/>
         </div>
         <div class="text">
@@ -44,15 +44,28 @@ export default {
     gap: 0px;
 }
 
+.button:hover {
+    scale: 1.1;
+}
+
+.button.icon-only .icon {
+    margin-right: 0;
+}
+
+.button .icon {
+    margin-right: 5px;
+}
 .button {
     display: flex;
+    transition: all .3s ease-in-out;
+    border: 1px solid;
     justify-content: center;
     align-items: center;
-    border-radius: 10px;
+    border-radius: 100px;
     cursor: pointer;
     padding: 10px 20px;
     width: fit-content;
-    gap: 10px;
+    
 }
 
 .light .icon {

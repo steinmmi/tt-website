@@ -3,7 +3,7 @@
     <div id="nav">
       <BaseHeader/>
     </div>
-    <router-view/>
+    <router-view class="content"/>
   </div>
 </template>
 
@@ -25,17 +25,24 @@ export default {
     src: url("assets/CoconRegularFont.otf") format("opentype");
 }
 
-
+html, body, #app {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  
+}
 #app {
   font-family: Cocon;
+  margin: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  max-width: 1440px;
 }
 
 #nav {
-  padding: 30px;
+  padding: 0px 30px;
 }
 
 #nav a {
@@ -46,4 +53,12 @@ export default {
 #nav a.router-link-exact-active {
   color: #42b983;
 }
+a {
+  text-decoration: none;
+}
+.content {
+  max-width: 1440px;
+  margin: auto;
+}
+
 </style>
