@@ -39,10 +39,19 @@ html, body, #app {
   text-align: center;
   color: #2c3e50;
   max-width: 1440px;
+  
+
 }
 
 #nav {
-  padding: 0px 30px;
+  padding: 0px 5%;
+  position: fixed;
+  width: 90%;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+  background-color: white;
+  z-index: 999;
+  top: 0;
+  left: 0;
 }
 
 #nav a {
@@ -56,9 +65,11 @@ html, body, #app {
 a {
   text-decoration: none;
 }
-.content {
+#app .content {
   max-width: 1440px;
   margin: auto;
+  margin-top: 120px;
+  padding-top: 0;
 }
 
 </style>
